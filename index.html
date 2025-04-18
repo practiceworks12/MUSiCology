@@ -21,18 +21,15 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    
-
 
   <!-- NavBar Start -->
-
-
-  
+  <!-- No structural changes needed, Bootstrap handles collapse -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="navbar">
     <div class="container">
       <!-- Brand: Icon + Text -->
       <a class="navbar-brand" href="#">
-          <img src="Musicology LOGO.png" alt="LOGO" width="25%">
+          <!-- Adjusted logo width slightly via CSS for responsiveness -->
+          <img src="Musicology LOGO.png" alt="LOGO" class="navbar-logo-img">
       </a>
       <!-- Mobile Toggler Button -->
       <button
@@ -48,22 +45,22 @@
       </button>
       <!-- Navbar Links -->
       <div class="collapse navbar-collapse" id="navbarContent">
-        
+
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#hero">HOME</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#pricing">PRODUCT</a> 
+            <a class="nav-link" href="#pricing">PRODUCT</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#dance-tour">PROMO</a> 
+            <a class="nav-link" href="#dance-tour">PROMO</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#stats">ABOUT</a> 
+            <a class="nav-link" href="#stats">ABOUT</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#footer">CONTACT</a> 
+            <a class="nav-link" href="#footer">CONTACT</a>
           </li>
         </ul>
         <!-- Search Icon (Desktop only) -->
@@ -73,21 +70,26 @@
       </div>
     </div>
   </nav>
+  <!-- NavBar End -->
 
 
       <!-- Hero Section  -->
-       <section class="container-fluid hero-section">
-        <div class="row content-hero-section ">
-          <div class="col-5">
+       <section class="container-fluid hero-section" id="hero">
+         <!-- Added justify-content classes for responsive alignment -->
+        <div class="row content-hero-section justify-content-center justify-content-lg-start align-items-center">
+          <!-- Adjusted columns using Bootstrap grid classes for responsiveness -->
+          <!-- Added text alignment classes -->
+          <div class="col-11 col-md-9 col-lg-5 text-center text-lg-start">
               <h1 class="text-white hero-title">Title Here</h1>
               <p class="text-white hero-sub" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis voluptates, unde deserunt et fugiat corrupti ex aliquid placeat tenetur?</p>
-              <button class="btn  text-white px-5 rounded-1 hero-btn">REGISTER NOW</button>
+              <button class="btn text-white px-5 rounded-1 hero-btn">REGISTER NOW</button>
           </div>
         </div>
-
        </section>
        <!-- Hero Section end -->
+
        <!--Dancer Section  -->
+       <!-- UNCHANGED -->
        <section id="dance-tour" class="dance-tour-section section-bg-orange py-5 dotted-background-orange">
         <div class="container">
           <!-- Section Header -->
@@ -142,6 +144,7 @@
 
 
       <!-- PRacing SECTION -->
+      <!-- UNCHANGED -->
       <section id="pricing" class="pricing-section bg-dark text-white py-5 dotted-background-dark">
         <div class="container">
           <!-- Section Header -->
@@ -205,16 +208,16 @@
 
 
       <!-- Amazing Dance Section Start -->
-
+      <!-- UNCHANGED -->
       <section id="amazing-dance" class="amazing-dance-section">
-        
+
         <div class="row g-0">
-        
+
           <div class="col-lg-6 amazing-dance-img amazing-dance-img-1">
-          
+
           </div>
-          
-          <div class="col-lg-6 amazing-dance-body section-bg-orange d-flex flex-column justify-content-center align-items-start dotted-background-orange"> 
+
+          <div class="col-lg-6 amazing-dance-body section-bg-orange d-flex flex-column justify-content-center align-items-start dotted-background-orange">
               <h2 class="amazing-title">AMAZING DANCE</h2>
               <p class="amazing-sub">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
@@ -224,20 +227,22 @@
         </div>
       </section>
 
+      <!-- Best Dance Section start -->
+      <!-- UNCHANGED -->
       <section id="best-dance" class="best-dance-section">
-      
+
         <div class="row g-0">
-         
-          <div class="col-lg-6 amazing-dance-body section-bg-orange d-flex flex-column justify-content-center align-items-start order-lg-1 order-2 dotted-background-orange"> 
+
+          <div class="col-lg-6 amazing-dance-body section-bg-orange d-flex flex-column justify-content-center align-items-start order-lg-1 order-2 dotted-background-orange">
               <h2 class="amazing-title">BEST DANCE</h2>
               <p class="amazing-sub">
                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
               </p>
                <a href="#" class="btn btn-dark amazing-btn">READ MORE</a>
           </div>
-       
+
           <div class="col-lg-6 amazing-dance-img amazing-dance-img-2 order-lg-2 order-1">
-            
+
           </div>
         </div>
       </section>
@@ -246,6 +251,7 @@
 
 
 <!-- Statistics Section -->
+      <!-- UNCHANGED -->
       <section id="stats" class="stats-section bg-dark text-white py-5">
         <div class="container">
           <!-- Section Header -->
@@ -286,8 +292,9 @@
 
 
       <!--  Testimonial Section  -->
+      <!-- UNCHANGED -->
       <section id="testimonial" class="testimonial-section text-white text-center d-flex align-items-center">
-        
+
         <div class="container testimonial-content">
           <!-- Quote -->
           <blockquote class="testimonial-quote lead mb-4">
@@ -301,8 +308,7 @@
 
 
        <!-- Subscribe section -->
-
-      
+      <!-- UNCHANGED -->
       <section id="subscribe" class="subscribe-section section-bg-orange text-white py-5 dotted-background-orange">
         <div class="container text-center">
              <!-- Section Header -->
@@ -314,7 +320,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-8 col-lg-6">
                     <form action="#" class="subscribe-form mt-2">
-                       
+
                         <div class="input-group input-group-lg">
                           <input
                             type="email"
@@ -337,7 +343,7 @@
 
 
        <!-- footer -->
-
+       <!-- UNCHANGED -->
        <footer id="footer" class="footer bg-dark text-white pt-5 pb-4">
         <div class="container">
           <!-- Footer Grid -->
@@ -358,7 +364,7 @@
                 <a href="#" class="text-white"><i class="fab fa-whatsapp fa-lg"></i></a>
               </div>
             </div>
-  
+
             <!-- Column 2: About Links -->
             <!-- Adjusted columns for better spacing based on design -->
             <div class="col-lg-2 col-sm-4 col-6 footer-col">
@@ -371,7 +377,7 @@
                 <li><a href="#">Privacy Policy</a></li>
               </ul>
             </div>
-  
+
             <!-- Column 3: Services Links -->
             <div class="col-lg-2 col-sm-4 col-6 footer-col">
               <h6 class="footer-title text-uppercase mb-3">Services</h6>
@@ -383,7 +389,7 @@
                 <li><a href="#">Payment Method</a></li>
               </ul>
             </div>
-  
+
             <!-- Column 4: Other Links -->
             <div class="col-lg-2 col-sm-4 col-6 footer-col">
               <h6 class="footer-title text-uppercase mb-3">Other</h6>
@@ -395,11 +401,12 @@
             </div>
             <!-- Optional Spacer Column -->
              <div class="col-lg-2 d-none d-lg-block"></div>
-  
+
           </div> <!-- End Row -->
         </div> <!-- End Container -->
       </footer>
       <!-- Footer end -->
+
   <!--  Bootstrap JS (Offline) -->
   <script src="assets/bootstrap.bundle.min.js"></script>
 
@@ -408,7 +415,7 @@
 
   <!--  Custom JS -->
   <script src="script.js">
-    
+    // Your custom JS if any
   </script>
 </body>
 </html>
