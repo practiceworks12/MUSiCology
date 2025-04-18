@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Bootstrap Project</title>
+
+  <!--  Bootstrap CSS (Offline) -->
+  <link rel="stylesheet" href="assets/bootstrap.min.css" />
+
+  <!--  Bootstrap CSS (CDN Fallback) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" onerror="this.href='assets/bootstrap.min.css'" />
+
+  <!--  Font Awesome (CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!--  Google Fonts (Roboto & Open Sans) -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <!--  Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    
+
+
+  <!-- NavBar Start -->
+
+
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="navbar">
+    <div class="container">
+      <!-- Brand: Icon + Text -->
+      <a class="navbar-brand" href="#">
+          <img src="Musicology LOGO.png" alt="LOGO" width="25%">
+      </a>
+      <!-- Mobile Toggler Button -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarContent"
+        aria-controls="navbarContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse" id="navbarContent">
+        
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#hero">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#pricing">PRODUCT</a> 
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#dance-tour">PROMO</a> 
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#stats">ABOUT</a> 
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#footer">CONTACT</a> 
+          </li>
+        </ul>
+        <!-- Search Icon (Desktop only) -->
+        <a href="#" class="nav-link text-white ms-lg-3 d-none d-lg-inline-block search-icon-nav">
+          <i class="fas fa-search"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+
+      <!-- Hero Section  -->
+       <section class="container-fluid hero-section">
+        <div class="row content-hero-section ">
+          <div class="col-5">
+              <h1 class="text-white hero-title">Title Here</h1>
+              <p class="text-white hero-sub" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis voluptates, unde deserunt et fugiat corrupti ex aliquid placeat tenetur?</p>
+              <button class="btn  text-white px-5 rounded-1 hero-btn">REGISTER NOW</button>
+          </div>
+        </div>
+
+       </section>
+       <!-- Hero Section end -->
+       <!--Dancer Section  -->
+       <section id="dance-tour" class="dance-tour-section section-bg-orange py-5 dotted-background-orange">
+        <div class="container">
+          <!-- Section Header -->
+          <div class="text-center text-white mb-5 section-header">
+            <h2 class="section-title">DANCE TOUR</h2>
+            <p class="section-sub">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
+            </p>
+          </div>
+          <!-- Dance Tour Cards Row -->
+          <div class="row gy-4 justify-content-center">
+            <!-- Card 1: America -->
+            <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+              <div class="card tour-card text-center h-100">
+                <img src="Musicology Item Pic1.png" class="card-img-top" alt="America Dancer"/>
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">AMERICA</h5>
+                  <p class="card-text mb-0">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Card 2: Asia -->
+            <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+              <div class="card tour-card text-center h-100">
+                <img src="Musicology Item Pic2.png" class="card-img-top" alt="Asia Dancer"/>
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">ASIA</h5>
+                  <p class="card-text mb-0">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Card 3: Australia -->
+            <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+              <div class="card tour-card text-center h-100">
+                <img src="Musicology Item Pic3.png" class="card-img-top" alt="Australia Dancer"/>
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">AUSTRALIA</h5>
+                  <p class="card-text mb-0">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Row -->
+        </div><!-- End Container -->
+      </section>
+      <!-- Dance Tour Section end -->
+
+
+      <!-- PRacing SECTION -->
+      <section id="pricing" class="pricing-section bg-dark text-white py-5 dotted-background-dark">
+        <div class="container">
+          <!-- Section Header -->
+          <div class="text-center mb-5 section-header">
+            <h2 class="section-title">PRICING</h2>
+            <p class="section-sub">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
+            </p>
+          </div>
+          <!-- Pricing Cards Row -->
+          <div class="row gy-4 justify-content-center">
+            <!-- Card 1: Basic -->
+            <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+              <div class="card pricing-card text-center h-100">
+                <div class="card-body d-flex flex-column">
+                  <div class="pricing-icon-wrapper mb-3">
+                    <i class="fas fa-award fa-3x"></i>
+                  </div>
+                  <h5 class="card-title pricing-title">BASIC</h5>
+                  <p class="card-text pricing-description mb-4">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
+                  <a href="#" class="btn btn-dark pricing-button mt-auto">$150.00</a>
+                </div>
+              </div>
+            </div>
+            <!-- Card 2: Professional -->
+             <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+              <div class="card pricing-card text-center h-100">
+                 <div class="card-body d-flex flex-column">
+                   <div class="pricing-icon-wrapper mb-3">
+                    <i class="fas fa-award fa-3x"></i>
+                   </div>
+                  <h5 class="card-title pricing-title">PROFESSIONAL</h5>
+                  <p class="card-text pricing-description mb-4">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
+                  <a href="#" class="btn btn-dark pricing-button mt-auto">$200.00</a>
+                </div>
+              </div>
+            </div>
+            <!-- Card 3: Ultimate -->
+            <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+              <div class="card pricing-card text-center h-100">
+                 <div class="card-body d-flex flex-column">
+                   <div class="pricing-icon-wrapper mb-3">
+                    <i class="fas fa-award fa-3x"></i>
+                   </div>
+                  <h5 class="card-title pricing-title">ULTIMATE</h5>
+                  <p class="card-text pricing-description mb-4">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
+                  <a href="#" class="btn btn-dark pricing-button mt-auto">$250.00</a>
+                </div>
+              </div>
+            </div>
+          </div> <!-- End Row -->
+        </div> <!-- End Container -->
+      </section>
+      <!-- Pricing Section end -->
+
+
+      <!-- Amazing Dance Section Start -->
+
+      <section id="amazing-dance" class="amazing-dance-section">
+        
+        <div class="row g-0">
+        
+          <div class="col-lg-6 amazing-dance-img amazing-dance-img-1">
+          
+          </div>
+          
+          <div class="col-lg-6 amazing-dance-body section-bg-orange d-flex flex-column justify-content-center align-items-start dotted-background-orange"> 
+              <h2 class="amazing-title">AMAZING DANCE</h2>
+              <p class="amazing-sub">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
+              </p>
+              <a href="#" class="btn btn-dark amazing-btn">READ MORE</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="best-dance" class="best-dance-section">
+      
+        <div class="row g-0">
+         
+          <div class="col-lg-6 amazing-dance-body section-bg-orange d-flex flex-column justify-content-center align-items-start order-lg-1 order-2 dotted-background-orange"> 
+              <h2 class="amazing-title">BEST DANCE</h2>
+              <p class="amazing-sub">
+                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
+              </p>
+               <a href="#" class="btn btn-dark amazing-btn">READ MORE</a>
+          </div>
+       
+          <div class="col-lg-6 amazing-dance-img amazing-dance-img-2 order-lg-2 order-1">
+            
+          </div>
+        </div>
+      </section>
+      <!-- Best Dance Section end -->
+
+
+
+<!-- Statistics Section -->
+      <section id="stats" class="stats-section bg-dark text-white py-5">
+        <div class="container">
+          <!-- Section Header -->
+          <div class="text-center mb-5 section-header">
+            <h2 class="section-title">OUR STATISTICS</h2>
+            <p class="section-sub">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
+            </p>
+          </div>
+          <!-- Statistics Row -->
+          <div class="row text-center">
+            <!-- Stat 1 -->
+            <div class="col-md-4 mb-4 mb-md-0">
+              <div class="stat-item">
+                <h3 class="stat-number display-5 fw-bold">1240+</h3>
+                <p class="stat-label mt-1">Club</p>
+              </div>
+            </div>
+            <!-- Stat 2 -->
+            <div class="col-md-4 mb-4 mb-md-0">
+              <div class="stat-item">
+                <h3 class="stat-number display-5 fw-bold">2000+</h3>
+                <p class="stat-label mt-1">Active Member</p>
+              </div>
+            </div>
+            <!-- Stat 3 -->
+            <div class="col-md-4">
+              <div class="stat-item">
+                <h3 class="stat-number display-5 fw-bold">1.000+</h3>
+                <p class="stat-label mt-1">Community</p>
+              </div>
+            </div>
+          </div> <!-- End Row -->
+        </div> <!-- End Container -->
+      </section>
+      <!-- Statistics Section end -->
+
+
+
+      <!--  Testimonial Section  -->
+      <section id="testimonial" class="testimonial-section text-white text-center d-flex align-items-center">
+        
+        <div class="container testimonial-content">
+          <!-- Quote -->
+          <blockquote class="testimonial-quote lead mb-4">
+             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum."
+          </blockquote>
+          <!-- Author -->
+          <p class="testimonial-author fw-bold mt-3">- HERBERT SIMON</p>
+        </div>
+      </section>
+      <!-- Testimonial Section end -->
+
+
+       <!-- Subscribe section -->
+
+      
+      <section id="subscribe" class="subscribe-section section-bg-orange text-white py-5 dotted-background-orange">
+        <div class="container text-center">
+             <!-- Section Header -->
+            <h2 class="section-title text-uppercase mb-3">Subscribe</h2>
+            <p class="section-sub mb-4 mx-auto" style="max-width: 600px;">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
+            </p>
+            <!-- Subscribe Form -->
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <form action="#" class="subscribe-form mt-2">
+                       
+                        <div class="input-group input-group-lg">
+                          <input
+                            type="email"
+                            class="form-control"
+                            placeholder="Your Email"
+                            aria-label="Your Email"
+                            required
+                          />
+                          <button class="btn btn-dark" type="submit">
+                            SUBSCRIBE
+                          </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+      </section>
+      <!-- Subscribe Section end -->
+
+
+
+       <!-- footer -->
+
+       <footer id="footer" class="footer bg-dark text-white pt-5 pb-4">
+        <div class="container">
+          <!-- Footer Grid -->
+          <div class="row gy-4">
+            <!-- Column 1: Brand/About -->
+            <div class="col-lg-4 col-md-12 footer-col"> <!-- Full width on medium -->
+              <h5 class="footer-brand mb-3">
+                  MUSICOLOGY
+              </h5>
+              <p class="footer-about">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at dignissim nunc, id maximus ex. Etiam nec dignissim elit, at dignissim enim.
+              </p>
+              <!-- Social Icons -->
+              <div class="social-links mt-3">
+                <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-facebook-f fa-lg"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-whatsapp fa-lg"></i></a>
+              </div>
+            </div>
+  
+            <!-- Column 2: About Links -->
+            <!-- Adjusted columns for better spacing based on design -->
+            <div class="col-lg-2 col-sm-4 col-6 footer-col">
+              <h6 class="footer-title text-uppercase mb-3">About</h6>
+              <ul class="list-unstyled footer-links">
+                <li><a href="#">History</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Brand Guidelines</a></li>
+                <li><a href="#">Terms & Condition</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+            </div>
+  
+            <!-- Column 3: Services Links -->
+            <div class="col-lg-2 col-sm-4 col-6 footer-col">
+              <h6 class="footer-title text-uppercase mb-3">Services</h6>
+              <ul class="list-unstyled footer-links">
+                <li><a href="#">How To Order</a></li>
+                <li><a href="#">Our Product</a></li>
+                <li><a href="#">Order Status</a></li>
+                <li><a href="#">Promo</a></li>
+                <li><a href="#">Payment Method</a></li>
+              </ul>
+            </div>
+  
+            <!-- Column 4: Other Links -->
+            <div class="col-lg-2 col-sm-4 col-6 footer-col">
+              <h6 class="footer-title text-uppercase mb-3">Other</h6>
+              <ul class="list-unstyled footer-links">
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Privacy</a></li>
+              </ul>
+            </div>
+            <!-- Optional Spacer Column -->
+             <div class="col-lg-2 d-none d-lg-block"></div>
+  
+          </div> <!-- End Row -->
+        </div> <!-- End Container -->
+      </footer>
+      <!-- Footer end -->
+  <!--  Bootstrap JS (Offline) -->
+  <script src="assets/bootstrap.bundle.min.js"></script>
+
+  <!--  Bootstrap JS (CDN Fallback) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" onerror="this.src='assets/bootstrap.bundle.min.js'"></script>
+
+  <!--  Custom JS -->
+  <script src="script.js">
+    
+  </script>
+</body>
+</html>

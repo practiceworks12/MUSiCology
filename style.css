@@ -1,0 +1,588 @@
+:root {
+    /* Colors from target design */
+    --primary-orange: #ff6600;
+    --dark-bg: #212529;
+    --text-light: #f8f9fa;
+    --text-muted-light: rgba(255, 255, 255, 0.75); /* Adjusted alpha */
+    --heading-dark: #fff; /* Headings on dark backgrounds */
+    --heading-orange: #fff; /* Headings on orange backgrounds */
+    --card-dark-bg: #343a40; /* Darker background for tour card body */
+  }
+  
+  body {
+    /* Fonts from target design */
+    font-family: "Poppins", sans-serif;
+    color: #444444;
+    
+  
+  }
+  
+  /* Headings font and default color */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    color: #333; /* Default for light backgrounds */
+  }
+  /* Heading colors on specific backgrounds */
+  .bg-dark h1, .bg-dark h2, .bg-dark h3, .bg-dark h4, .bg-dark h5, .bg-dark h6,
+  .footer h1, .footer h2, .footer h3, .footer h4, .footer h5, .footer h6 {
+      color: var(--heading-dark);
+  }
+  .section-bg-orange h1, .section-bg-orange h2, .section-bg-orange h3,
+  .section-bg-orange h4, .section-bg-orange h5, .section-bg-orange h6 {
+       color: var(--heading-orange);
+  }
+  
+  /* Link styling */
+  a {
+    color: var(--primary-orange);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover {
+    color: #ff8533;
+    text-decoration: none;
+  }
+  
+  /*--------------------------------------------------------------
+  # General Section Styling (Matching Design)
+  --------------------------------------------------------------*/
+  section {
+    overflow: hidden;
+    padding: 80px 0; /* Standard vertical padding */
+  }
+  
+  .section-bg-orange {
+    background-color: var(--primary-orange);
+  }
+  
+  .section-header {
+    margin-bottom: 60px; /* Spacing below titles/subtitles */
+  }
+  
+  .section-title {
+    font-size: 2.8rem; /* Title size from design */
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: #fff; /* Assuming most titles are on dark/orange bg */
+  }
+  /* Title on dark background specifically */
+  .bg-dark .section-title {
+      color: #fff;
+  }
+  
+  .section-sub {
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: var(--text-muted-light); /* Default for dark/orange bg */
+    max-width: 650px; /* Limit width */
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7; /* Improve readability */
+  }
+  .section-bg-orange .section-sub {
+       color: rgba(255, 255, 255, 0.9); /* Slightly brighter on orange */
+  }
+  .bg-dark .section-sub {
+       color: var(--text-muted-light);
+  }
+  
+  /*--------------------------------------------------------------
+  # Dotted Background Patterns (Matching Design)
+  --------------------------------------------------------------*/
+  .dotted-background-orange,
+  .dotted-background-dark,
+  .amazing-dance-body { /* Apply pattern to alternating text block too */
+      position: relative;
+      z-index: 1;
+  }
+  
+  /* Dots on Orange Background */
+  .dotted-background-orange::before,
+  .amazing-dance-body.section-bg-orange::before { /* Target orange text block */
+      content: '';
+      position: absolute;
+      inset: 0;
+      /* Dark dots, adjusted size/spacing to match design */
+      background-image: radial-gradient(circle at 1.5px 1.5px, rgba(0,0,0,0.2) 1.5px, transparent 0);
+      background-size: 18px 18px;
+      opacity: 0.8; /* Adjust visibility */
+      z-index: -1;
+  }
+  
+  /* Dots on Dark Background */
+  .dotted-background-dark::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      /* Light dots, adjusted size/spacing */
+      background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.09) 1px, transparent 0);
+      background-size: 25px 25px;
+      opacity: 0.7;
+      z-index: -1;
+  }
+  
+
+
+.hero-section{
+    background-image: url(Musicology\ Hero\ pic.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    z-index: 1;
+}
+
+/* HERO section */
+.hero-title{
+    font-size: 5rem;
+    color: white;
+    text-align: start;
+    margin-top: 20%;
+    font-weight: 700;
+}
+.hero-sub{
+    font-size: 1.3rem;
+    color: white;
+    text-align: start;
+    margin-top: 20px;
+    font-weight: 400;
+}
+.hero-btn{
+    background-color:orangered ;
+}
+.content-hero-section{
+    padding-top: 15rem;
+    padding-left: 9rem;
+}
+
+/* Dancer SECTION Start Here */
+.tour-card {
+    background-color: var(--card-dark-bg); /* Use specific dark shade */
+    border: none;
+    border-radius: 0; /* Square corners as per design */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .tour-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .tour-card .card-img-top {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    filter: grayscale(20%); /* Slightly desaturate image */
+    transition: filter 0.3s ease;
+  }
+  .tour-card:hover .card-img-top {
+      filter: grayscale(0%); /* Remove filter on hover */
+  }
+  
+  .tour-card .card-body {
+    padding: 30px 25px; /* Adjust padding */
+    background-color: var(--card-dark-bg);
+  }
+  
+  .tour-card .card-title {
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--primary-orange);
+    font-size: 1.4rem; /* Adjusted size */
+    text-transform: uppercase;
+  }
+  
+  .tour-card .card-text {
+    font-size: 0.9rem;
+    color: var(--text-muted-light);
+    line-height: 1.6;
+  }
+  
+
+/* pracing section */
+
+.pricing-card {
+    background-color: var(--primary-orange);
+    border: none;
+    border-radius: 0; /* Square corners */
+    color: #fff;
+    padding: 35px 25px; /* Adjusted padding */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+  }
+  
+  .pricing-icon-wrapper {
+      margin-bottom: 25px;
+  }
+  .pricing-icon-wrapper i {
+      color: #fff;
+      font-size: 3.5rem; /* Larger icon */
+  }
+  
+  .pricing-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+  
+  .pricing-description {
+    font-size: 0.9rem;
+    font-family: "Poppins", sans-serif;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 30px;
+    flex-grow: 1;
+  }
+  
+  .pricing-button {
+    background-color: var(--dark-bg);
+    color: #fff;
+    border: 2px solid var(--dark-bg); /* Add border for definition */
+    padding: 12px 30px; /* Adjusted padding */
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    border-radius: 0;
+    width: 100%;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .pricing-button:hover {
+    background-color: transparent; /* Make background transparent */
+    color: var(--dark-bg);      /* Dark text */
+    border-color: var(--dark-bg); /* Keep border */
+    transform: scale(1.02); /* Slight scale effect */
+  }
+
+
+
+
+  /* Amazing Dance Section start  */
+
+  .amazing-dance-section,
+  .best-dance-section {
+    padding: 0;
+  }
+  .amazing-dance-section .row,
+  .best-dance-section .row {
+     min-height: 65vh; /* Adjust height */
+  }
+  
+  .amazing-dance-img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+  }
+  /* Correct image paths */
+  .amazing-dance-img-1 { background-image: url('P2.png'); }
+  .amazing-dance-img-2 { background-image: url('P3.png'); }
+  
+  .amazing-dance-body {
+    background-color: var(--primary-orange);
+    padding: 100px 80px; /* Generous padding */
+    color: #fff;
+    /* Flex properties set in HTML */
+  }
+  
+  .amazing-title {
+    font-size: 3rem; /* Adjusted size */
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+  }
+  
+  .amazing-sub {
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    color: rgba(255, 255, 255, 0.95); /* Brighter text */
+    line-height: 1.8;
+    margin-bottom: 35px;
+  }
+  
+  .amazing-btn {
+    padding: 14px 45px; /* Adjusted padding */
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    border-radius: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background-color: var(--dark-bg);
+    color: #fff;
+    border: 2px solid var(--dark-bg); /* Add border */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .amazing-btn:hover {
+    background-color: #000; /* Darker background */
+    border-color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+
+
+
+
+
+
+/* Statostocs section here */
+.stats-section {
+  /* bg-dark, text-white, padding set in HTML */
+}
+
+.stat-item .stat-number {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #fff;
+  font-size: 3.2rem; /* Adjusted size */
+}
+.stat-item .stat-label {
+  font-size: 1.1rem;
+  font-family: "Poppins", sans-serif;
+  color: var(--text-muted-light);
+  margin-top: 8px; /* Adjust spacing */
+}
+
+
+/* testimonial-section */
+
+
+
+ .testimonial-section {
+    /* Check image path */
+    background-image: url('P1.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Parallax effect */
+    position: relative;
+    min-height: 75vh; /* Adjust height */
+    padding: 140px 0; /* Adjust padding */
+    z-index: 1;
+  }
+  
+  /* Dark overlay matching design */
+  .testimonial-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    /* Darker, slightly orange-tinted overlay */
+    background-color: rgba(30, 10, 0, 0.75);
+    z-index: -1;
+  }
+  
+  .testimonial-content {
+    position: relative;
+    z-index: 2;
+    max-width: 850px; /* Wider content area */
+    margin: 0 auto;
+  }
+  
+  .testimonial-quote {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.4rem; /* Larger quote */
+    font-weight: 400;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.95);
+  }
+  
+  .testimonial-author {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.4rem; /* Larger author */
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 1px;
+    margin-top: 30px;
+  }
+
+
+
+
+
+/* Subscribe-section */
+
+
+
+  .subscribe-section {
+    /* Background, text, padding, pattern set via HTML/General */
+  }
+  
+  .subscribe-section .section-title {
+    font-size: 2.8rem;
+  }
+  
+  .subscribe-section .section-sub {
+     color: rgba(255, 255, 255, 0.95); 
+  }
+  
+ 
+  .subscribe-form .input-group {
+      /* No shadow needed based on design */
+  }
+  
+  .subscribe-form .form-control {
+      border-radius: 0 !important;
+      border: none;
+      padding: 18px 25px; 
+      font-size: 1rem;
+      font-family: "Poppins", sans-serif;
+  }
+  .subscribe-form .form-control::placeholder {
+      color: #aaa;
+  }
+  .subscribe-form .form-control:focus {
+      box-shadow: none;
+      /* Optional focus style */
+      /* outline: 2px solid rgba(0,0,0,0.2); */
+      /* outline-offset: 2px; */
+  }
+  
+  .subscribe-form .btn {
+      border-radius: 0 !important;
+      padding: 18px 40px; 
+      font-weight: 600;
+      font-family: "Poppins", sans-serif;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+      background-color: var(--dark-bg);
+      color: #fff;
+      border: none;
+      transition: background-color 0.3s ease;
+  }
+  .subscribe-form .btn:hover {
+      background-color: #000;
+  }
+/* Footer Start Here */
+
+
+.footer {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  padding: 60px 0 30px 0; /* Adjust padding */
+}
+
+.footer .footer-brand {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 15px;
+}
+.footer .footer-brand i {
+   color: var(--primary-orange);
+   font-size: 1.5rem;
+   vertical-align: -2px;
+}
+
+.footer .footer-about {
+  color: var(--text-muted-light);
+  margin-bottom: 20px;
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+.footer .social-links a {
+  color: #fff;
+  transition: color 0.3s ease;
+  font-size: 1.4rem; /* Larger icons */
+  display: inline-block;
+}
+
+.footer .social-links a:hover {
+  color: var(--primary-orange);
+}
+
+.footer .footer-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase; /* Uppercase titles */
+  margin-bottom: 20px; /* Increased space */
+}
+
+.footer .footer-links li {
+  padding: 6px 0; /* Adjust link spacing */
+}
+
+.footer .footer-links a {
+  color: var(--text-muted-light);
+  font-size: 0.875rem;
+  transition: color 0.3s ease, padding-left 0.3s ease; 
+  display: inline-block; /* Needed for padding */
+}
+
+.footer .footer-links a:hover {
+  color: #fff;
+  padding-left: 5px; 
+}
+
+/*--------------------------------------------------------------
+# Responsive Adjustments (Matching Design Principles)
+--------------------------------------------------------------*/
+
+@media (max-width: 991.98px) {
+  body { padding-top: 70px; } /* Adjust if needed */
+  section { padding: 60px 0; }
+  .section-title { font-size: 2.4rem; }
+  .hero-title { font-size: 3.8rem; }
+  .amazing-title { font-size: 2.6rem; }
+  .amazing-dance-body { padding: 60px 40px; }
+  .testimonial-section { padding: 100px 0; min-height: 60vh; }
+  .testimonial-quote { font-size: 1.2rem; }
+  .footer-col { margin-bottom: 30px; }
+  .footer-col:last-child { margin-bottom: 0; }
+}
+
+@media (max-width: 767.98px) {
+  body { padding-top: 66px; } /* Adjust if needed */
+  .hero-section { text-align: center; min-height: 80vh; padding: 80px 0; }
+  .hero-content-container { align-items: center; }
+  .hero-sub { max-width: 90%; }
+  .section-title { font-size: 2.1rem; }
+  .section-sub { font-size: 0.95rem; max-width: 90%; }
+  .amazing-dance-section .row, .best-dance-section .row { min-height: unset; }
+  .amazing-dance-img { min-height: 350px; }
+  .amazing-title { font-size: 2.2rem; }
+  .amazing-dance-body { text-align: center; align-items: center !important; padding: 50px 30px; }
+  .stat-item .stat-number { font-size: 2.8rem; } /* Adjusted size */
+  .testimonial-section { padding: 80px 0; min-height: 50vh; background-attachment: scroll; } /* Disable parallax on mobile */
+  .testimonial-quote { font-size: 1.1rem; }
+  .subscribe-form .input-group { flex-direction: column; gap: 10px; }
+  .subscribe-form .form-control, .subscribe-form .btn { width: 100%; border-radius: 4px !important; }
+  .subscribe-form .form-control { text-align: center; }
+  .footer { text-align: center; } /* Center footer text */
+  .footer-col { text-align: center; } /* Center footer columns */
+   .footer .social-links { justify-content: center; }
+}
+
+@media (max-width: 575.98px) {
+  body { padding-top: 62px; } /* Adjust if needed */
+  section { padding: 50px 0; }
+  .section-title { font-size: 1.9rem; }
+  .hero-title { font-size: 3rem; }
+  .hero-sub { font-size: 0.9rem; }
+  .hero-btn { padding: 12px 35px; font-size: 0.85rem; }
+  .amazing-title { font-size: 2rem; }
+  .amazing-btn { padding: 12px 35px; font-size: 0.85rem; }
+  .stat-item .stat-number { font-size: 2.5rem; }
+  .testimonial-quote { font-size: 1rem; }
+  .pricing-card { padding: 30px 20px; }
+  .footer-col { margin-bottom: 25px; }
+}
+
+
+
+
